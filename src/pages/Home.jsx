@@ -7,17 +7,17 @@ const Home = () => {
         <div className="card homepage-card shadow mb-5">
           <div className="card-body">
             <h3 className="card-title homepage-title mb-3">
-              Studio Ghibli API Lab
+              Studio Ghibli Film Database
             </h3>
             <p className="card-text homepage-text mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              ipsam quos iusto totam exercitationem eos in debitis assumenda
-              doloremque, voluptatum, officiis odit ipsa nihil quae, quam eum.
-              Iusto, placeat minima.
+              Studio Ghibli Inc. is a Japanese animation film studio
+              headquartered in Koganei, Tokyo. The studio is best known for its
+              animated feature films, and has also produced several short
+              subjects, television commercials, and one television film.
             </p>
             <small className="contact-info">
               If you like what you see then hit me up at{" "}
-              <span className="highlight">randomperson@gmail.com</span>
+              <span className="highlight">lpattison25@gmail.com</span>
             </small>
           </div>
         </div>

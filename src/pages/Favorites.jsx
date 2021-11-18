@@ -1,41 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Films = (props) => {
-  const [films, setFilms] = useState([]);
-
-  const FavFilm = props.favorite;
-
-  useEffect(() => {
-    fetch("https://ghibliapi.herokuapp.com/films")
-      .then((res) => {
-        return res.json();
-      })
-      .then((allFilms) => {
-        setFilms(allFilms);
-      });
-  }, []);
+const Favorites = (props) => {
+  const RemovedFilm = props.unFavorite;
 
   return (
     <main className="films mb-3">
       <div className="container">
         <ul className="films-list list-group film-list">
-          {films.map((film, index) => {
+          {props.favorites.map((favorite, index) => {
             return (
               <li key={index} className="list-group-item film-item p-5 mb-4">
                 <div className="film-info">
-                  <h5 className="film-title mb-3">{film.title}</h5>
-                  <p className="film-description">{film.description}</p>
+                  <h5 className="film-title mb-3">{favorite.title}</h5>
+                  <p className="film-description">{favorite.description}</p>
                 </div>
                 <div className="film-btn-area d-flex align-items-center mt-5">
-                  <Link className="details-btn " to={`/films/${film.id}`}>
+                  <Link className="details-btn " to={`/films/${favorite.id}`}>
                     See Full Details
                   </Link>
                   <div
-                    onClick={() => props.handleFavorite(film)}
+                    onClick={() => props.handleRemove(favorite)}
                     className="star-container d-flex justify-content-center align-items-center"
                   >
-                    <FavFilm />
+                    <RemovedFilm />
                   </div>
                 </div>
               </li>
@@ -47,4 +35,4 @@ const Films = (props) => {
   );
 };
 
-export default Films;
+export default Favorites;

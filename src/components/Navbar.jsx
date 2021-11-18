@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="container d-flex justify-content-between align-items-center">
         <div className="logo-container">
           <img
-            src="https://www.nicepng.com/png/full/133-1339285_a-very-happy-new-year-2015-from-lisa.png"
+            src="https://i.imgur.com/dwDIVTe.png"
             alt=""
             className="logo img-fluid"
           />
@@ -28,6 +28,15 @@ const Navbar = () => {
             to="/films"
           >
             Films
+          </NavLink>
+
+          <NavLink
+            activeClassName="active-link"
+            className="nav-link"
+            exact
+            to="/favorites"
+          >
+            Favorites
           </NavLink>
         </div>
       </div>

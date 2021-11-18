@@ -149,14 +149,14 @@ body {
 .active-link:hover {
   color: white !important;
 }
+
 .btn-area {
-  margin-top: 3rem !important;
+  margin-top: 3rem;
 }
 
 .back-btn {
   padding: 1rem 5rem;
 
-  margin-top: 3rem !important;
   border-radius: 0.5rem;
   margin-right: 1rem;
   color: white !important;
@@ -169,4 +169,32 @@ body {
 .back-btn:hover {
   color: white;
   background-color: #89a8c5;
+}
+
+.star-container {
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  color: white !important;
+  font-weight: 600;
+  border: 0.1rem solid black;
+  background-color: #bdd0c4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 2rem;
+  /* color: gold; */
+  margin-left: 1rem;
+  cursor: pointer;
+  color: gold;
+}
+
+.trash {
+  font-size: 2rem;
+  /* color: gold; */
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #8a8a8a;
 }
